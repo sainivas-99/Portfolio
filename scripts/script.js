@@ -5,19 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
     carousels.forEach(container => {
         let interval;
         const slide = container.querySelector('.carousel-slide');
-        const items = slide.children;
+        const images = slide.querySelectorAll('img');
         let currentIndex = 0;
-        
+        const containerWidth = container.offsetWidth;
+
         // Set initial positions
-        Array.from(items).forEach((item, index) => {
-            item.style.transform = `translateX(${index * 100}%)`;
+        images.forEach((img, index) => {
+            img.style.width = `${containerWidth}px`;
         });
 
         // Auto-advance function
         function startInterval() {
             interval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % items.length;
-                slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+                currentIndex = (currentIndex + 1) % images.length;
+                slide.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
             }, 3000);
         }
 
