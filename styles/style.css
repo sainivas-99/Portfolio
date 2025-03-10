@@ -85,6 +85,118 @@
     backdrop-filter: blur(5px);
 }
 
+/* Project Image Sizing */
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures images fill container without distortion */
+    object-position: center; /* Centers image focus */
+    border-radius: 10px;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    padding: 2rem;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    font-size: 1.8rem;
+    color: var(--ds-primary);
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    padding: 1rem 0;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+/* Certifications Carousel */
+.certifications-carousel .carousel-slide {
+    padding: 20px;
+}
+
+.certification-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-width: 300px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.cert-header {
+    margin-bottom: 1.5rem;
+}
+
+.cert-header i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .hero-ds {
+        padding: 2rem 0;
+    }
+
+    .ds-title {
+        font-size: 2.5rem;
+    }
+
+    .ds-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        height: 250px;
+    }
+
+    .ds-title {
+        font-size: 2rem;
+    }
+
+    .ds-subtitle {
+        font-size: 1rem;
+    }
+
+    .ds-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 /* Animated Background Elements */
 .data-points {
     position: absolute;
