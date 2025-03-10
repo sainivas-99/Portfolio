@@ -9,6 +9,33 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
+    /* Add new styles for slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 300px; /* Adjust based on your needs */
+      overflow: hidden;
+    }
+
+    .mySlides {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: fade 1.5s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.4} 
+      to {opacity: 1}
+    }
+
+    .active {
+      display: block;
+      opacity: 1;
+    }
+
         body {
     font-size: clamp([min font size], calc([min font size] + ([max font size] - [min font size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))), [max font size]);
 }
@@ -186,15 +213,28 @@
 							<p>Python Project</p>
 						</header>
 					</article>
-                    <article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/license-plate-detector" class="link">Image Forgery Identification using CNN</a></h3>
-							<p>Python Project</p>
-						</header>
-					</article>
+          
+
+          <article>
+            <div class="slideshow-container"> <!-- Changed from span to div -->
+              <div class="mySlides fade">     <!-- Slide 1 -->
+                <img src="images/lpd1.png" style="width:100%;height:100%;object-fit: cover;">
+              </div>
+              <div class="mySlides fade">     <!-- Slide 2 -->
+                <img src="images/lpd2.png" style="width:100%;height:100%;object-fit: cover;">
+              </div>
+              <div class="mySlides fade">     <!-- Slide 3 -->
+                <img src="images/lpd3.png" style="width:100%;height:100%;object-fit: cover;">
+              </div>
+            </div>
+            <header class="major">
+              <h3><a href="https://github.com/sainivas-99/license-plate-detector" class="link">
+                License Plate Detector</a></h3>
+              <p>Python|CNN|Computer Vision</p>
+            </header>
+          </article>
+
+          <!-- 
 					<article>
 						<span class="image">
 							<img src="images/pic01.jpg" alt="" />
@@ -203,7 +243,7 @@
 							<h3><a href="https://github.com/sainivas-99/license-plate-detector" class="link">License Plate Detector using YOLO v3</a></h3>
 							<p>Python Project</p>
 						</header>
-					</article>
+					</article> -->
                     
 					<article>
 						<span class="image">
@@ -333,6 +373,25 @@
                 value: 4
               }
             }
+          });
+        </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const slideshows = document.querySelectorAll('.slideshow-container');
+            
+            slideshows.forEach((container) => {
+              let slideIndex = 0;
+              const slides = container.getElementsByClassName('mySlides');
+              
+              if (slides.length > 0) {
+                slides[0].classList.add('active');
+              }
+              setInterval(() => {
+                slides[slideIndex].classList.remove('active');
+                slideIndex = (slideIndex + 1) % slides.length;
+                slides[slideIndex].classList.add('active');
+              }, 3000);
+            });
           });
         </script>
       </body>
