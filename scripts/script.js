@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const slide = container.querySelector('.carousel-slide');
         const items = slide.children;
         let currentIndex = 0;
-        const itemWidth = items[0].clientWidth;
         
         // Set initial positions
         Array.from(items).forEach((item, index) => {
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function startInterval() {
             interval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % items.length;
-                slide.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                slide.style.transform = `translateX(-${currentIndex * 100}%)`;
             }, 3000);
         }
 
