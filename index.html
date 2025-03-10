@@ -9,32 +9,32 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
   <style>
-    /* Add new styles for slideshow */
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      height: 300px; /* Adjust based on your needs */
-      overflow: hidden;
-    }
+    /* Add specific class names to avoid conflicts */
+  .project-slideshow {
+    position: relative;
+    max-width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
 
-    .mySlides {
-      display: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      animation: fade 1.5s ease-in-out;
-    }
+  .project-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: projectFade 1.5s ease-in-out;
+  }
 
-    @keyframes fade {
-      from {opacity: 0.4} 
-      to {opacity: 1}
-    }
+  @keyframes projectFade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+  }
 
-    .active {
-      display: block;
-      opacity: 1;
-    }
+  .project-active {
+    display: block;
+    opacity: 1;
+  }
 
         body {
     font-size: clamp([min font size], calc([min font size] + ([max font size] - [min font size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))), [max font size]);
@@ -214,16 +214,15 @@
 						</header>
 					</article>
           
-
           <article>
-            <div class="slideshow-container"> <!-- Changed from span to div -->
-              <div class="mySlides fade">     <!-- Slide 1 -->
+            <div class="project-slideshow">  <!-- Changed class name -->
+              <div class="project-slide">    <!-- Changed class name -->
                 <img src="images/lpd1.png" style="width:100%;height:100%;object-fit: cover;">
               </div>
-              <div class="mySlides fade">     <!-- Slide 2 -->
+              <div class="project-slide">    <!-- Changed class name -->
                 <img src="images/lpd2.png" style="width:100%;height:100%;object-fit: cover;">
               </div>
-              <div class="mySlides fade">     <!-- Slide 3 -->
+              <div class="project-slide">    <!-- Changed class name -->
                 <img src="images/lpd3.png" style="width:100%;height:100%;object-fit: cover;">
               </div>
             </div>
@@ -377,22 +376,23 @@
         </script>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
-            const slideshows = document.querySelectorAll('.slideshow-container');
+            // Use specific class names
+            const slideshows = document.querySelectorAll('.project-slideshow');
             
             slideshows.forEach((container) => {
               let slideIndex = 0;
-              const slides = container.getElementsByClassName('mySlides');
+              const slides = container.getElementsByClassName('project-slide');
               
               if (slides.length > 0) {
-                slides[0].classList.add('active');
+                slides[0].classList.add('project-active');
               }
               setInterval(() => {
-                slides[slideIndex].classList.remove('active');
+                slides[slideIndex].classList.remove('project-active');
                 slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].classList.add('active');
+                slides[slideIndex].classList.add('project-active');
               }, 3000);
             });
           });
-        </script>
+          </script>
       </body>
       </html>
