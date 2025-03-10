@@ -1,398 +1,131 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Sai Nivas Rangaraju - Portfolio</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-  <style>
-    /* Add specific class names to avoid conflicts */
-  .project-slideshow {
-    position: relative;
-    max-width: 100%;
-    height: 300px;
-    overflow: hidden;
-  }
-
-  .project-slide {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: projectFade 1.5s ease-in-out;
-  }
-
-  @keyframes projectFade {
-    from {opacity: 0.4} 
-    to {opacity: 1}
-  }
-
-  .project-active {
-    display: block;
-    opacity: 1;
-  }
-
-        body {
-    font-size: clamp([min font size], calc([min font size] + ([max font size] - [min font size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width]))), [max font size]);
-}
-
-
-    #banner {
-      position: relative;
-      z-index: 1;
-      overflow: hidden; /* Hide overflow */
-    }
-
-    #banner .inner {
-      position: relative;
-      z-index: 2;
-    }
-
-    #banner::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and transparency as needed */
-      z-index: 0;
-    }
-
-    #banner header.major,
-    #banner .content,
-    #banner .actions {
-      position: relative;
-      z-index: 3;
-    }
-
-    #banner img {
-      display: block;
-      margin: 0 auto;
-    }
-
-    #banner h1,
-    #banner p,
-    #banner .actions a.button {
-      color: #fff;
-    }
-
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-    @media (max-width: 736px) {
-  #banner .actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align buttons on mobile */
-  }
-
-  #banner .actions li {
-    width: 100%;
-    margin-bottom: 0.5em; /* Add margin between buttons for spacing */
-  }
-}
-.achievements-gallery {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .achievement {
-      text-align: center;
-      margin: 10px;
-    }
-
-    .achievement img {
-      max-width: 400px; /* Set your desired max width */
-      max-height: 400px; /* Set your desired max height */
-    }
-  </style>
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="is-preload">
-  <!-- Wrapper -->
-  <div id="wrapper">
-
-    <!-- Header -->
-    <header id="header" class="alt">
-      <a href="index.html" class="logo"><strong>Sai Nivas Rangaraju's</strong> <span> Portfolio </span></a>
+<body>
+    <header class="gradient-bg">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 class="animate-pop-in">Your Name</h1>
+            <p class="tagline animate-pop-in">Professional Title</p>
+        </div>
     </header>
 
-    <!-- Main -->
-    <div id="main">
-
-<!-- Banner-->
-<section id="banner" class="major" style="background-color: purple;">
-    <div id="particles-js"></div>
-
-
-    <div class="inner">
-
-        
-
-
-      <div class="content">
-        <ul class="icons">
-            <li><a href="https://github.com/sainivas-99" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-            <li><a href="https://www.linkedin.com/in/sai-nivas-rangaraju/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-        </ul>
-    </div>
-
-      <header class="content">
-        <!-- <h2>Hey, This is Sumanth😊</h2> -->
-        <h2>Data Science and Computer Engineer, Interested in building Data driven Predictive Analytic systems for optimal business decision making 📈.</h2>
-
-
-      </header>
-      <div class="content">
-        <p>YOLO😊</p>
-
-        <ul class="actions">
-          <li><a href="#projects" class="button next scrolly">Projects</a></li>
-          <li><a href="#achievements" class="button next scrolly">Achievements</a></li>
-        </ul>
-        
-      </div>
-    </div>
-    
-    <!-- Statistics Display -->
-    <div class="statistics">
-    </div>
-  </section>
-  
-  
-
-
-			<!-- Main -->
-			<div id="main">
-
-				<!-- Projects -->
-                
-				<section id="projects" class="tiles">
-                    <hr class="major-divider">
-                    <h2>Projects</h2>
-                    <div class="tiles">
-
-                    <article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/Retail_Data_Analytics" class="link">
-                                Walmart Stores' Retail Data Analytics</a></h3>
-							<p>R Project</p>
-						</header>
-					</article>
-
-                    <article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/Road-Accidents-Casualities-Analysis" class="link">Road Accidents Casualities Analysis</a></h3>
-							<p>Python Project</p>
-						</header>
-					</article>
-
-
-          <article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/Film-Genre-Statistics" class="link"> Film Genre Statistics</a></h3>
-							<p>Python Project</p>
-						</header>
-					</article>
-          
-          <article>
-            <div class="project-slideshow">  <!-- Changed class name -->
-              <div class="project-slide">    <!-- Changed class name -->
-                <img src="images/lpd1.png" style="width:100%;height:100%;object-fit: cover;">
-              </div>
-              <div class="project-slide">    <!-- Changed class name -->
-                <img src="images/lpd2.png" style="width:100%;height:100%;object-fit: cover;">
-              </div>
-              <div class="project-slide">    <!-- Changed class name -->
-                <img src="images/lpd3.png" style="width:100%;height:100%;object-fit: cover;">
-              </div>
-            </div>
-            <header class="major">
-              <h3><a href="https://github.com/sainivas-99/license-plate-detector" class="link">
-                License Plate Detector</a></h3>
-              <p>Python|CNN|Computer Vision</p>
-            </header>
-          </article>
-
-          <!-- 
-					<article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/license-plate-detector" class="link">License Plate Detector using YOLO v3</a></h3>
-							<p>Python Project</p>
-						</header>
-					</article> -->
-                    
-					<article>
-						<span class="image">
-							<img src="images/pic04.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/Mathematical_modeling" class="link">Pharmokinetics and Model Fitting(Mathematical Modeling)</a></h3>
-							<p>R Project</p>
-						</header>
-					</article>
-                    <article>
-						<span class="image">
-							<img src="images/pic06.jpg" alt="" />
-						</span>
-						<header class="major">
-							<h3><a href="https://github.com/sainivas-99/SIAM" class="link">SIAG/FME Code Quest 2023 DeFi & RoboAdvising Challenge</a></h3>
-							<p>Python Project</p>
-						</header>
-					</article>
-				</section>
-
-
-                <section id="achievements">
-                    <h2>Achievements</h2>
-                    <div class="achievements-gallery">
-                      <!-- Add images and descriptions for certifications -->
-                      <div class="achievement">
-                        <img src="images/AI.png" alt="Certification 1" />
-                        <p>NPTEL: Artificial Intelligence</p>
-                      </div>
-                      <div class="achievement">
-                        <img src="images/GCP.png" alt="Certification 2" />
-                        <p>NPTEL: Google Cloud Platform</p>
-                      </div>
-                      <div class="achievement">
-                        <img src="images/Python.png" alt="Certification 3" />
-                        <p>NPTEL: Python</p>
-                      </div>
-                      <div class="achievement">
-                        <img src="images/Mircosoft Certificate.png" alt="Certification 4" />
-                        <p>Microsoft Certification</p>
-                      </div>
+    <section id="about" class="section-spacing">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="profile-card">
+                    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-img">
+                    <div class="contact-box">
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> your.email@example.com
+                        </a>
+                        <div class="social-links">
+                            <a href="[GitHub URL]" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="[LinkedIn URL]" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="[Twitter URL]" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
                     </div>
-                  </section>
-          
+                </div>
+                <div class="bio">
+                    <p class="highlight">Creative professional with X years of experience...</p>
+                    <p>Detailed description of your professional background and skills...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			</div>
+    <!-- Experience Section (similar structure to about) -->
 
-
-			<!-- Contact -->
-			<section id="contact">
-                <!-- <label for="Contact">Contact</label> -->
-
-				<div class="inner">
-                    
-
-					<section>
-                        <h2>Contact</h2>
-
-						<form action="https://formsubmit.co/srangaraju@hawk.iit.edu" method="POST">
-							<div class="fields">
-								<div class="field half">
-                                    
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field half">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="6"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" class="primary" /></li>
-								<li><input type="reset" value="Clear" /></li>
-							</ul>
-						</form>
-					</section>
-					<section class="split">
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-envelope"></span>
-								<h3>Email</h3>
-								<a href="#">srangaraju@hawk.iit.edu</a>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-home"></span>
-								<h3>Address</h3>
-								<span>Chicago, Illinois<br />
-								Zip : 60616<br />
-								United States of America</span>
-							</div>
-						</section>
-					</section>
-				</div>
-			</section>
-
+    <section id="projects" class="section-spacing">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
             
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3 class="project-title">Project Name 1</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="assets/project1-1.jpg" alt="Project 1">
+                        <img src="assets/project1-2.jpg" alt="Project 1">
+                        <img src="assets/project1-3.jpg" alt="Project 1">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <p>Project description with key features and technologies used.</p>
+                    <div class="project-links">
+                        <a href="[Live Demo]" class="btn"><i class="fas fa-eye"></i> Demo</a>
+                        <a href="[GitHub Repo]" class="btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
 
-			
+            <!-- Project 2 (similar structure) -->
+        </div>
+    </section>
 
-		</div>
+    <section id="certifications" class="section-spacing">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <!-- Certification 1 -->
+                        <div class="certification-card">
+                            <div class="cert-header">
+                                <i class="fas fa-certificate"></i>
+                                <h3>Certification Title 1</h3>
+                            </div>
+                            <p class="cert-org">Issuing Organization</p>
+                            <p class="cert-date">Issued: Month 2023</p>
+                            <a href="[Credential URL]" class="btn">View Credential</a>
+                        </div>
 
-		<!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-      
-        <!-- JavaScript for Dynamic Background -->
-        <script>
-          particlesJS("particles-js", {
-            particles: {
-              number: {
-                value: 150
-              },
-              size: {
-                value: 4
-              }
-            }
-          });
-        </script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            // Use specific class names
-            const slideshows = document.querySelectorAll('.project-slideshow');
-            
-            slideshows.forEach((container) => {
-              let slideIndex = 0;
-              const slides = container.getElementsByClassName('project-slide');
-              
-              if (slides.length > 0) {
-                slides[0].classList.add('project-active');
-              }
-              setInterval(() => {
-                slides[slideIndex].classList.remove('project-active');
-                slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].classList.add('project-active');
-              }, 3000);
-            });
-          });
-          </script>
-      </body>
-      </html>
+                        <!-- Certification 2-4 (similar structure) -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="gradient-bg">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="[GitHub URL]"><i class="fab fa-github"></i></a>
+                        <a href="[LinkedIn URL]"><i class="fab fa-linkedin"></i></a>
+                        <a href="[Twitter URL]"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
