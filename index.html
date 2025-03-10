@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Your Name - Data Scientist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="gradient-bg">
-        <nav class="main-nav">
+    <header class="data-science-header">
+        <!-- Animated Background Elements -->
+        <div class="data-points"></div>
+        <div class="binary-stream"></div>
+        
+        <nav class="ds-nav">
             <ul>
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#about"><i class="fas fa-dna"></i> About</a></li>
+                <li><a href="#experience"><i class="fas fa-chart-line"></i> Experience</a></li>
+                <li><a href="#skills"><i class="fas fa-database"></i> Skills</a></li>
                 <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
                 <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <h1 class="animate-pop-in">Your Name</h1>
-            <p class="tagline animate-pop-in">Professional Title</p>
+        
+        <div class="hero-ds">
+            <div class="profile-floating">
+                <img src="assets/profile.png" alt="Your Name" class="ds-profile">
+            </div>
+            <h1 class="ds-title animate-float">Your Name</h1>
+            <p class="ds-subtitle">Transforming Data into Decisions</p>
+            <div class="ds-badges">
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Deep Learning</span>
+                <span class="badge">Data Visualization</span>
+            </div>
         </div>
     </header>
 
@@ -42,14 +55,12 @@
                     </div>
                 </div>
                 <div class="bio">
-                    <p class="highlight">Creative professional with X years of experience...</p>
-                    <p>Detailed description of your professional background and skills...</p>
+                    <p class="highlight">Data Scientist with X years of experience in transforming complex datasets into actionable insights...</p>
+                    <p>Specializing in machine learning, predictive modeling, and big data analytics. Proficient in Python, R, SQL, and various data visualization tools. Passionate about solving real-world problems through data-driven approaches.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Experience Section (similar structure to about) -->
 
     <section id="projects" class="section-spacing">
         <div class="container">
@@ -57,16 +68,16 @@
             
             <!-- Project 1 -->
             <div class="project-card">
-                <h3 class="project-title">Project Name 1</h3>
+                <h3 class="project-title">Predictive Maintenance System</h3>
                 <div class="carousel-container">
                     <div class="carousel-slide">
-                        <img src="assets/project1-1.jpg" alt="Project 1">
-                        <img src="assets/project1-2.jpg" alt="Project 1">
-                        <img src="assets/project1-3.jpg" alt="Project 1">
+                        <img src="assets/project1-1.jpg" alt="Data Pipeline Architecture">
+                        <img src="assets/project1-2.jpg" alt="Model Performance">
+                        <img src="assets/project1-3.jpg" alt="Dashboard Interface">
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Project description with key features and technologies used.</p>
+                    <p>Developed a machine learning system predicting equipment failures with 92% accuracy using TensorFlow and IoT sensor data.</p>
                     <div class="project-links">
                         <a href="[Live Demo]" class="btn"><i class="fas fa-eye"></i> Demo</a>
                         <a href="[GitHub Repo]" class="btn"><i class="fab fa-github"></i> Code</a>
@@ -74,7 +85,24 @@
                 </div>
             </div>
 
-            <!-- Project 2 (similar structure) -->
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3 class="project-title">Customer Segmentation Analysis</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="assets/project2-1.jpg" alt="Cluster Analysis">
+                        <img src="assets/project2-2.jpg" alt="RFM Scoring">
+                        <img src="assets/project2-3.jpg" alt="Segmentation Dashboard">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <p>Implemented unsupervised learning models for customer segmentation using K-Means and PCA, resulting in 15% increase in marketing ROI.</p>
+                    <div class="project-links">
+                        <a href="[Live Demo]" class="btn"><i class="fas fa-eye"></i> Demo</a>
+                        <a href="[GitHub Repo]" class="btn"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -88,21 +116,52 @@
                         <div class="certification-card">
                             <div class="cert-header">
                                 <i class="fas fa-certificate"></i>
-                                <h3>Certification Title 1</h3>
+                                <h3>AWS Certified Machine Learning</h3>
                             </div>
-                            <p class="cert-org">Issuing Organization</p>
-                            <p class="cert-date">Issued: Month 2023</p>
+                            <p class="cert-org">Amazon Web Services</p>
+                            <p class="cert-date">Issued: March 2023</p>
                             <a href="[Credential URL]" class="btn">View Credential</a>
                         </div>
 
-                        <!-- Certification 2-4 (similar structure) -->
+                        <!-- Certification 2 -->
+                        <div class="certification-card">
+                            <div class="cert-header">
+                                <i class="fas fa-certificate"></i>
+                                <h3>Data Science Professional</h3>
+                            </div>
+                            <p class="cert-org">IBM</p>
+                            <p class="cert-date">Issued: January 2023</p>
+                            <a href="[Credential URL]" class="btn">View Credential</a>
+                        </div>
+
+                        <!-- Certification 3 -->
+                        <div class="certification-card">
+                            <div class="cert-header">
+                                <i class="fas fa-certificate"></i>
+                                <h3>Deep Learning Specialization</h3>
+                            </div>
+                            <p class="cert-org">DeepLearning.AI</p>
+                            <p class="cert-date">Issued: November 2022</p>
+                            <a href="[Credential URL]" class="btn">View Credential</a>
+                        </div>
+
+                        <!-- Certification 4 -->
+                        <div class="certification-card">
+                            <div class="cert-header">
+                                <i class="fas fa-certificate"></i>
+                                <h3>TensorFlow Developer</h3>
+                            </div>
+                            <p class="cert-org">Google</p>
+                            <p class="cert-date">Issued: September 2022</p>
+                            <a href="[Credential URL]" class="btn">View Credential</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="gradient-bg">
+    <footer class="data-science-header">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
