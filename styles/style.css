@@ -470,6 +470,45 @@ footer {
     font-size: 1rem;
 }
 
+.ds-subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.static-text {
+    color: var(--text-light);
+}
+
+.animated-subtitle {
+    color: var(--ds-accent);
+    margin-left: 0.5rem;
+    position: relative;
+}
+
+.cursor {
+    color: var(--ds-accent);
+    animation: blink 1s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes erasing {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0 }
+}
+
 /* Responsive Footer */
 @media (max-width: 768px) {
     .footer-content {

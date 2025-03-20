@@ -38,4 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Typing Animation
+    const roles = ["Data Scientist", "Data Analyst", "Business Analyst", "Machine Learning Engineer"];
+    const element = document.getElementById('animatedSubtitle');
+    let currentRole = 0;
+    let isDeleting = false;
+    let text = '';
+    let typingSpeed = 150;
+    let eraseSpeed = 100;
+    let pauseBetween = 2000;
+
+    function type() {
+        const currentText = roles[currentRole];
+        
+        if (isDeleting) {
+            text = currentText.substring(0, text.length - 1);
+            typingSpeed = eraseSpeed;
+        } else {
+            text = currentText.substring(0, text.length + 1);
+            typingSpeed = 150;
+        }
+
+        element.textContent = text;
+
+        if (!isDeleting && text === currentText) {
+            typingSpeed = pauseBetween;
+            isDeleting = true;
+        } else if (isDeleting && text === '') {
+            isDeleting = false;
+            currentRole = (currentRole + 1) % roles.length;
+            typingSpeed = 500;
+        }
+
+        setTimeout(type, typingSpeed);
+    }
+
+    type();
 });
