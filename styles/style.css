@@ -154,29 +154,7 @@
     margin-top: auto;
 }
 
-/* Certifications Carousel */
-.certifications-carousel .carousel-slide {
-    padding: 20px;
-}
 
-.certification-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    min-width: 300px;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.cert-header {
-    margin-bottom: 1.5rem;
-}
-
-.cert-header i {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -339,7 +317,7 @@ footer {
 }
 
 .skills-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .skills-card h3 {
@@ -492,6 +470,117 @@ footer {
 .cursor {
     color: var(--ds-accent);
     animation: blink 1s infinite;
+}
+
+/* Certifications Carousel */
+.certifications-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.cert-carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.certification-card {
+    min-width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cert-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cert-header i {
+    color: var(--ds-primary);
+    font-size: 1.8rem;
+}
+
+.cert-org {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.cert-date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-nav button {
+    background: var(--ds-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-nav button:hover {
+    background: var(--ds-secondary);
+}
+
+.carousel-nav button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .certification-card {
+        min-width: 280px;
+    }
+    
+    .cert-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-carousel-container {
+        padding: 0 10px;
+    }
+    
+    .certification-card {
+        min-width: 260px;
+        padding: 15px;
+    }
+    
+    .cert-header i {
+        font-size: 1.5rem;
+    }
 }
 
 @keyframes typing {
