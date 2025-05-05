@@ -76,3 +76,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     type();
 });
+
+    // Certifications Carousel Logic
+    const certCarouselContainer = document.querySelector('.cert-carousel-container');
+    const prevBtn = document.getElementById('prevCert');
+    const nextBtn = document.getElementById('nextCert');
+    const certCards = document.querySelectorAll('.certification-card');
+    let certIndex = 0;
+    const cardWidth = certCards[0].offsetWidth + 20; // 20px gap
+    const maxIndex = certCards.length - 1;
+    let certInterval;
+
+    function updateCarouselPosition() {
+        certCarouselContainer.style.transform = `translateX(-${certIndex * cardWidth}px)`;
+        prevBtn.disabled = certIndex === 0;
+        nextBtn.disabled = certIndex >= maxIndex - 1;
+    }
+
+    function autoSlideCerts() {
+        certInterval = setInterval(() => {
+            certIndex = (certIndex + 1) % (maxIndex + 1);
+            updateCarouselPosition();
+        }, 3000);
+    }
+
+    updateCarouselPosition();
+    autoSlideCerts();
+
+    nextBtn.addEventListener('click', () => {
+        clearInterval(certInterval);
+        if (certIndex < maxIndex) certIndex++;
+        updateCarouselPosition();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        clearInterval(certInterval);
+        if (certIndex > 0) certIndex--;
+        updateCarouselPosition();
+    });
+
+    const certCarousel = document.querySelector('.certifications-carousel');
+    certCarousel.addEventListener('mouseenter', () => clearInterval(certInterval));
+    certCarousel.addEventListener('mouseleave', autoSlideCerts);
